@@ -25,8 +25,8 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def destroy
-    @item.destroy(set_item)
-    render json: {message: "#{@item.title} deleted successfully."}, status: 220
+    @item.update(is_deleted: true)
+    render json: { message: " deleted successfully." }, status: 204
   end
 
   public
@@ -36,5 +36,10 @@ class Api::V1::ItemsController < ApplicationController
 
   def set_item
     @item = Item.find(params[:id])
+    if @item.present?
+      @item
+    else
+      render json: { errors: 'No record found!' }, status: 404
+    end
   end
 end
