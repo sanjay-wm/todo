@@ -1,3 +1,3 @@
-object @todo_item
+object @item
 attributes :id, :title, :status
-child(:user) { attributes :name }
+child(:tags) { attributes :title }

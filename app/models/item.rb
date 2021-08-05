@@ -8,6 +8,7 @@ class Item
   field :created_at, type: Time
   field :is_deleted, type: Boolean
 
+  has_many :tags
   # Validations
   validates_presence_of :title, :status
   validates_uniqueness_of :title
