@@ -1,12 +1,14 @@
 class Item
   include Mongoid::Document
+  include Mongoid::Paranoia
+
 
   ITEM_STATUS = ['start', 'not start', 'finish'].freeze
 
   field :title, type: String
   field :status, type: String
   field :created_at, type: Time
-  field :is_deleted, type: Boolean
+  field :deleted_at, type: DateTime
 
   has_many :tags
   # Validations

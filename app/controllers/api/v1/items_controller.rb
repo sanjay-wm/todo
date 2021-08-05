@@ -25,8 +25,22 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def destroy
-    @item.update(is_deleted: true)
-    render json: { message: " deleted successfully." }, status: 204
+    if @item
+      @item.destroy
+      render json: { message: "Item successfully deleted" }, status: 204
+    else
+      render json: { errors: "Not found todo item" }
+    end
+  end
+
+  def restore_removed_item
+    @item = Item.unscoped.find(params[:id])
+    if @item
+      @item.update(deleted_at: nil)
+      render json: { message: "Item restored Successfully" }, status: 200
+    else
+      render json: { errors: "Not found todo item" }
+    end
   end
 
   public
