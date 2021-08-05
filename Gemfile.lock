@@ -78,7 +78,7 @@ GEM
       mongoid (>= 7.0, < 7.3)
     msgpack (1.4.2)
     nio4r (2.5.8)
-    nokogiri (1.12.1-x86_64-linux)
+    nokogiri (1.12.2-x86_64-linux)
       racc (~> 1.4)
     oj (3.12.3)
     puma (3.12.6)
