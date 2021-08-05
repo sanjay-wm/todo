@@ -24,6 +24,11 @@ class Api::V1::ItemsController < ApplicationController
     render json: @item, status: 200
   end
 
+  def destroy
+    @item.destroy(set_item)
+    render json: {message: "#{@item.title} deleted successfully."}, status: 220
+  end
+
   public
   def allow_params
     params.permit(:title, :status, :created_at)
