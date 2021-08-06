@@ -11,7 +11,7 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def index
-    @items = Item.all
+    @items = Item.limit(params[:limit]).offset(params[:offset])
     render json: { items: @items}, status: 200
   end
 
