@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "ebc8de33-ef16-4364-a461-405492e5b510",
+		"name": "todo-coll",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "item-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{host}}/{{path}}/items?offset=0&limit=5",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{path}}",
+						"items"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show_item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{host}}/{{path}}/items/610bec630ac94aa752db057f",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{path}}",
+						"items",
+						"610bec630ac94aa752db057f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "6 API call",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "finish",
+							"type": "text"
+						},
+						{
+							"key": "created_at",
+							"value": "2021-08-04 20:01:34",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/{{path}}/items",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{path}}",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Update 6 API call",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "finish",
+							"type": "text"
+						},
+						{
+							"key": "created_at",
+							"value": "2021-08-05 19:25:37",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/{{path}}/items/610bec630ac94aa752db057f",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{path}}",
+						"items",
+						"610bec630ac94aa752db057f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{host}}/{{path}}/items/610aa5440ac94a38a8edcd94",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{path}}",
+						"items",
+						"610aa5440ac94a38a8edcd94"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restore_deleted_item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{host}}/{{path}}/items/610aa5440ac94a38a8edcd94/restore_removed_item",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"{{path}}",
+						"items",
+						"610aa5440ac94a38a8edcd94",
+						"restore_removed_item"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
