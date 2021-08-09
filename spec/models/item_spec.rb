@@ -9,5 +9,5 @@ RSpec.describe Item, type: :model do
 
   it { is_expected.to validate_presence_of(:title) }
   it { is_expected.to validate_presence_of(:status) }
-  it { is_expected.to validate_uniqueness_of(:title) }
+  it { is_expected.to validate_uniqueness_of(:deleted_at) }
 end

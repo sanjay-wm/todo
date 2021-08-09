@@ -18,5 +18,10 @@ RSpec.describe Api::V1::ItemsController do
     it 'returns status code 200' do
       expect(response).to have_http_status(200)
     end
+
+    it "returns http success" do
+      expect(response).to have_http_status(:success)
+    end
   end
+
 end
