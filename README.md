@@ -11,12 +11,26 @@ Things you may want to cover:
 
 * Operating System: Ubuntu
 
+* Database - MongoDB
+
 * Database creation: db:migrate
 
-* How to run the test suite
+  * This application is used for API.
 
-* Services (job queues, cache servers, search engines, etc.)
+ 
 
-* Deployment instructions
+* Installation steps
+  * clone the repo 
+    * $ git clone https://github.com/sanjay-wm/todo.git 
 
-* This application is used for API.
+* Go to project directory
+  * $ cd todos 
+* install dependencies 
+  * $ bundle install / bundle
+* start server 
+  * $ rails s / rails server
+
+
+* Usage
+  * User postman to test API
+    * Go to the Postman dir to get collection and environment file.
