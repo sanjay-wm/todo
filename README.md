@@ -33,4 +33,4 @@ Things you may want to cover:
 
 * Usage
   * User postman to test API
-    * Go to the Postman dir to get collection and environment file.
+    * Go to the public/postman dir to get collection and environment file.
