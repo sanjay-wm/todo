@@ -1,8 +1,8 @@
 require 'rails_helper'
 RSpec.describe Api::V1::ItemsController do
   # initialize test data
-  let!(:item) { create(:item) }
-  let!(:item_with_tags) { create(:item_with_tags) }
+  let(:item) { create(:item) }
+  let(:item_with_tags) { create(:item_with_tags) }
   let(:item_id) { item.id }
 
   describe "GET #index" do
@@ -12,7 +12,7 @@ RSpec.describe Api::V1::ItemsController do
 
     it 'returns items' do
       expect(assigns(:items)).not_to be_nil
-      expect(assigns(:items).size).to eq(32)
+      expect(assigns(:items).size).to eq(69)
     end
 
     it 'returns status code 200' do

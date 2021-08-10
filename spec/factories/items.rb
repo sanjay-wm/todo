@@ -4,9 +4,9 @@ FactoryBot.define do
     status { 'start' }
 
     factory :item_with_tags do
-      after(:create) do |item|
-        create(:tag, item: item)
-      end
+      # after(:create) do |item|
+      #   # create(:tag, item: item)
+      # end
     end
   end
 end
