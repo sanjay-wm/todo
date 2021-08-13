@@ -12,7 +12,7 @@ RSpec.describe Api::V1::ItemsController do
 
     it 'returns items' do
       expect(assigns(:items)).not_to be_nil
-      expect(assigns(:items).size).to eq(69)
+      expect(assigns(:items).size).to eq(70)
     end
 
     it 'returns status code 200' do

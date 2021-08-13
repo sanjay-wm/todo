@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{protocol}}://{{host}}/{{path}}/items?offset=0&limit=5",
+					"raw": "{{protocol}}://{{host}}/{{path}}/items?offset=0&limit=5&tag=rails",
 					"protocol": "{{protocol}}",
 					"host": [
 						"{{host}}"
@@ -28,6 +28,10 @@
 						{
 							"key": "limit",
 							"value": "5"
+						},
+						{
+							"key": "tag",
+							"value": "rails"
 						}
 					]
 				}

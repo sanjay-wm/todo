@@ -11,7 +11,16 @@ class Api::V1::ItemsController < ApplicationController
   end
 
   def index
-    @items = Item.limit(params[:limit]).offset(params[:offset])
+    @items = if params[:tag]
+               tg = Tag.where(title: "#{params[:tag]}").last
+               if tg.present?
+                 Item.where(id: tg.item_id)
+               else
+                 {message: 'No record matched!'}
+               end
+             else
+               Item.limit(params[:limit]).offset(params[:offset])
+             end
     render json: { items: @items}, status: 200
   end
 
